@@ -1,21 +1,21 @@
 <template>
-  <div class="w-full h-screen">
-    <div class="absolute z-0 w-full max-h-screen overflow-hidden">
+  <div class="w-screen h-screen">
+    <div class="absolute z-0 w-screen max-h-screen overflow-hidden">
       <div
-        class="w-full h-full grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-0 covers-background"
+        class="w-screen h-screen grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-0 covers-background"
       >
         <div
           v-for="episode in episodes"
-          :key="episode.uuidv4"
+          :key="episode.title"
           class="h-24 sm:h-32 md:h-40 lg:h-48 xl:h-56 bg-cover"
-          :style="`background-image:url(/img/${episode.links.coverImage});`"
+          :style="`background-image:url('/img/${episode.cover}');`"
         ></div>
       </div>
     </div>
     <div
-      class="absolute z-10 w-full h-full bg-gradient-to-r from-green-600 to-teal-600 opacity-90"
+      class="absolute z-10 w-screen h-screen bg-gradient-to-r from-green-600 to-teal-600 opacity-90"
     ></div>
-    <div class="absolute z-20 w-full h-full">
+    <div class="absolute z-20 w-screen h-screen">
       <transition name="fade" mode="out-in">
         <Loader v-if="loading" />
       </transition>

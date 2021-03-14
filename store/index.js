@@ -3,8 +3,7 @@ import database from '../database.json'
 export const state = () => ({
   loading: true,
   episode: null,
-  tags: database.tags,
-  episodes: database.episodes,
+  episodes: database,
 })
 
 export const actions = {
