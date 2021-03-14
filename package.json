@@ -1,9 +1,9 @@
 {
-  "name": "welche-drei-fragezeichen-folge-heute-web",
+  "name": "welche-drei-fragezeichen-folge-heute",
   "version": "1.0.0",
   "private": true,
-  "author": "Cappic90<cappic90@gmail.com>",
-  "license": "Apache-2.0",
+  "author": "Cappic90<dreifragezeichen@cappic90.de>",
+  "license": "MIT",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -17,7 +17,8 @@
     "@nuxtjs/axios": "^5.12.4",
     "@nuxtjs/pwa": "^3.3.3",
     "core-js": "^3.8.1",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "tailwindcss-filters": "^3.0.0"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.3.0",

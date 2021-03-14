@@ -2,15 +2,10 @@
   <div class="w-screen h-screen">
     <div class="absolute z-0 w-screen max-h-screen overflow-hidden">
       <div
-        class="w-screen h-screen grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-0 covers-background"
-      >
-        <div
-          v-for="episode in episodes"
-          :key="episode.title"
-          class="h-24 sm:h-32 md:h-40 lg:h-48 xl:h-56 bg-cover"
-          :style="`background-image:url('/img/${episode.cover}');`"
-        ></div>
-      </div>
+        v-if="episode"
+        class="w-screen h-screen bg-fixed bg-left-top bg-no-repeat bg-cover filter-blur"
+        :style="`background-image:url('/img/${episode.cover}');`"
+      ></div>
     </div>
     <div
       class="absolute z-10 w-screen h-screen bg-gradient-to-r from-green-600 to-teal-600 opacity-90"
@@ -37,7 +32,7 @@ import { mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapState(['loading', 'episodes']),
+    ...mapState(['loading', 'episodes', 'episode']),
   },
   mounted() {
     this.shuffle()

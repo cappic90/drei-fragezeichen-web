@@ -8,9 +8,13 @@ module.exports = {
         spotify: '#1DB954',
       },
     },
+    filter: {
+      blur: 'blur(10px)',
+    },
   },
   future: {
     purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
   },
+  plugins: [require('tailwindcss-filters')],
 }
