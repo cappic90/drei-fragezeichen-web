@@ -9,7 +9,7 @@ module.exports = {
       },
     },
     filter: {
-      blur: 'blur(10px)',
+      blur: 'blur(8px)',
     },
   },
   future: {
