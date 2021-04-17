@@ -1,4 +1,4 @@
-import database from '../database.json'
+import database from '../episodes.json'
 
 export const state = () => ({
   loading: true,
