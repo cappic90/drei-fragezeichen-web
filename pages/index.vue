@@ -4,7 +4,9 @@
       <div
         v-if="episode"
         class="w-screen h-screen bg-fixed bg-left-top bg-no-repeat bg-cover filter-blur"
-        :style="`background-image:url('/img/${episode.cover}');`"
+        :style="`background-image:url(${require('~/assets/img/covers/' +
+          episode.cover +
+          '?format=jpg&resize&size=400')});`"
       ></div>
     </div>
     <div
